@@ -53,6 +53,18 @@ table {
     border-spacing: 0;
 }
 
+p {
+    margin-bottom: 15px;
+/*    margin-left: 10px;
+    margin-right: 10px;*/
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+.bio p {
+    color: red;
+    font-size: 1em;
+}
 
 /* BEGIN YOUR STYLES HERE */
 .headline_photo img{
@@ -70,6 +82,11 @@ table {
 .intro{
     font-size: 1.5em;
 }
+
+.photo.fixed{
+    position: fixed;
+}
+
 /* Start your base/mobile styles here */
 
 html, body {
@@ -86,4 +103,9 @@ html, body {
 
 @media(min-width: 729px) {
     /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+.story{
+        max-width: 968px;
+        display: block;
+        margin: 0 auto;
+}
 }
