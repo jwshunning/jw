@@ -7,105 +7,347 @@ Sometimes, when we stretch out to larger screens, we need to make minor tweaks f
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
 
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 
-
 /* THIS IS A RESET
 DO NOT EDIT THIS STUFF */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
-
 
 /* HTML5 display-role reset for older browsers */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 p {
-    margin-bottom: 15px;
-/*    margin-left: 10px;
+  margin-bottom: 30px;
+  /*    margin-left: 10px;
     margin-right: 10px;*/
-    line-height: 1.5;
-    font-size: 1.2em;
+  line-height: 1.6;
+  font-size: 1.2em;
+  font-family: 'Merriweather', serif;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
+.story {
+  display: block;
+  transition: width .5s ease-in-out;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Spectral SC', serif;
+  padding: 10px;
+  font-weight: 700;
+}
+
+/*.story.active {
+  width: 75%;
+  margin: 0;
+}*/
+
+/*.sidebar {
+  position: absolute;
+  right: -100%;
+  width: 25%;
+  height: 100vh;
+  padding: 1em;
+  transition: right .5s ease-in-out;
+  box-sizing: border-box;
+  display: none;
+}*/
+
+.jw-facts {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  left: 0;
+  top: -100%;
+  text-align: center;
+  /*border: 4px solid #000;*/
+  transition: top .5s ease-in-out;
+  /*font-size: .8em;*/
+}
+
+.jw-facts p {
+  font-size: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.jw-facts h1 {
+  font-family: 'Spectral SC', serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.jw-facts.active {
+  top: 0;
+}
+
+.audioquote p {
+  font-size: 2em;
+}
+
+/*#play {
+  float: left;
+}
+
+.story p {
+  clear: both;
+}*/
+
+/*.sidebar.active {
+  right: 0;
+}*/
+
+/*#fact1, #fact2, #fact3 {
+  top: 75%;
+}*/
+
 .bio p {
-    color: red;
-    font-size: 1em;
+  color: #000;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  margin: 0 auto;
+  max-width: 760px;
+  z-index: -2;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bio {
+  display: none;
+  /*display: block;*/
+  /*background-color: #000;
+  width: 50%;*/
+}
+
+.bio.active {
+  display: block;
+  background-color: #bcbcbc;
+}
+
+.read {
+  color: #fff;
+  height: 30px;
+}
+
+.profile {
+  /*position: relative;*/
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profile img {
+  width: 100%;
+}
+
+.photo {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.journey.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 /* BEGIN YOUR STYLES HERE */
-.headline_photo img{
-    max-width: 100%;
-    width: 100%;
-    max-height: 80vh;
+
+.headline_photo img {
+  max-width: 100%;
+  /*width: 100%;*/
+  max-height: 100vh;
+  height: 100%;
+  object-fit: cover;
 }
 
-.headline{
-    font-size: 5em;
-    text-align: center;
-    padding: 10px;
+.headline_photo {
+  position: relative;
+  text-align: center;
 }
 
-.intro{
-    font-size: 1.5em;
+.headline {
+  font-size: 2.5em;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Spectral SC', serif;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 70%;
+  color: #fff;
 }
 
-.photo.fixed{
-    position: fixed;
+.intro {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-family: 'Spectral SC', serif;
+}
+
+.name {
+  border: solid #9cad9a 3px;
+  padding: 5px;
+  display: inline;
+}
+
+.small-bio {
+  display: none;
+}
+
+.small-bio.active {
+  display: block;
+  /*left: 0;*/
+  /*position: absolute;*/
+  /*left: 8em;*/
+  border-top: solid 3px #9cad9a;
+  background-color: #ccc;
+  padding: 20px;
 }
 
 /* Start your base/mobile styles here */
 
 html, body {
-    /* Sets default font-size to 16px, ensuring 1em = 16px; */
-    font-size: 16px;
+  /* Sets default font-size to 16px, ensuring 1em = 16px; */
+  font-size: 16px;
 }
-
 
 /* Tablet/Desktop overrides */
 
 @media(min-width: 681px) {
-    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+  /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
 }
 
 @media(min-width: 729px) {
-    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
-.story{
-        max-width: 968px;
-        display: block;
-        margin: 0 auto;
-}
+  /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+  .story {
+    max-width: 748px;
+    display: block;
+    margin: 0 auto;
+    clear: both;
+  }
+  .jw-steps {
+    max-width: 698px;
+  }
+  /*.bio {
+    z-index: 0;
+  }*/
+  .photo {
+    /*z-index: -1;*/
+    width: 40%;
+  }
+  .photo img {
+    /*width: 50%;*/
+    /*float: left;*/
+  }
+  .profile {
+    position: relative;
+    left: 28%;
+  }
+  .headline_photo img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100vh;
+  }
+  .bio {
+    display: none;
+    /*display: block;*/
+    /*background-color: #000;
+    width: 50%;*/
+  }
+  .bio.active {
+    display: block;
+    background-color: #bcbcbc;
+    width: 40%;
+  }
+  .read {
+    color: #fff;
+    margin-top: 50px;
+    max-width: 40%;
+    height: 25%;
+  }
+  .headline_photo {
+    position: relative;
+    text-align: center;
+  }
+  .headline {
+    font-size: 3.7em;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Spectral SC', serif;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 45%;
+    left: 23%;
+    color: #fff;
+  }
+  .section h2 {
+    top: 57%;
+    left: 27%;
+    position: absolute;
+    color: #fff;
+    font-size: 1.7em;
+    font-family: 'Spectral SC', serif;
+  }
+  .intro {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: 'Spectral SC', serif;
+    max-width: 768px;
+    display: block;
+    top: 60%;
+    left: 23%;
+    color: #fff;
+    position: absolute;
+  }
+  .story p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 2;
+  }
+  .small-bio.active {
+    position: absolute;
+  }
 }
