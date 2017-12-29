@@ -114,14 +114,16 @@ h1 {
 
 .jw-facts p {
   font-size: 1em;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /*margin-top: 10px;*/
+  /*margin-bottom: 10px;*/
+  padding: 0;
 }
 
 .jw-facts h1 {
   font-family: 'Spectral SC', serif;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /*margin-top: 10px;*/
+  /*margin-bottom: 10px;*/
+  border: none;
 }
 
 .jw-facts.active {
@@ -266,6 +268,21 @@ h2 {
   display: none;
 }
 
+p.involve {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.jw-steps p {
+  margin: 0;
+}
+
+.jw-steps {
+  padding: 30px;
+  margin-left: 15px;
+}
+
 .small-bio.active {
   display: block;
   /*left: 0;*/
@@ -297,8 +314,13 @@ html, body {
     margin: 0 auto;
     clear: both;
   }
+  .involve {
+    margin-bottom: 0;
+  }
   .jw-steps {
     max-width: 698px;
+    padding: 30px;
+    margin-left: 30px;
   }
   /*.bio {
     z-index: 0;
