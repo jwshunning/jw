@@ -57,20 +57,47 @@ $(document).ready(function () {
 		bio.toggleClass("active");
 	});
 
-	$(".audio-container").on("click", function () {
-		// $("#play").attr('src', "https://image.freepik.com/free-icon/pause-button-outline_318-40569.jpg");
-		var violeta = $("#violeta")[0];
-		if (violeta.paused == false) {
-			violeta.pause();
-		} else {
-			violeta.play();
+	var pauseAudio = function (container) {
+		var player = container.find("audio")[0];
+
+		player.pause();
+		player.currentTime = 0;
+		container.data("playing", false);
+	};
+	var playAudio = function (container) {
+		var player = container.find("audio")[0];
+
+		player.play();
+		container.data("playing", true);
+	};
+	$(".btn").on("click", function () {
+		/* ON CLICK PAUSE ALL AUDIO PLAYBACK, UPDATE THE STATE OF THIS AUDIO AND THE CONTAINER DATA */
+		var container = $(this).closest(".audio-container"),
+			player = container.find("audio")[0],
+			previousContainer = $(".audio-container.active");
+
+		if (previousContainer.data("playing") && previousContainer[0] !== container[0]) {
+			pauseAudio(previousContainer);
+			container.currentTime = 0;
 		}
-		// violeta.play();
 
-		var swapImage = $('#play').attr('data-swap'),
-			currentImage = $('#play').attr('src');
+		$(".audio-container.active").removeClass("active");
 
-		$('#play').attr({
+		container.addClass("active");
+
+		if (container.data("playing")) {
+			pauseAudio(container);
+			container.currentTime = 0;
+		} else {
+			playAudio(container);
+		}
+
+		//swap images when audio clicked
+		var pic = $(this).find(".play");
+		var swapImage = pic.attr('data-swap'),
+			currentImage = pic.attr('src');
+
+		pic.attr({
 			'src': swapImage,
 			'data-swap': currentImage
 		});
