@@ -446,17 +446,12 @@ html, body {
   }*/
   .photo {
     /*z-index: -1;*/
-    max-width: 30%;
+    max-width: 100%;
   }
   .profile {
     position: relative;
-    left: 34%;
-  }
-  .headline_photo img {
-    max-width: 100%;
-    width: 100%;
-    max-height: 100vh;
-    margin-bottom: 30px;
+    /*left: 34%;*/
+    max-width: 30%;
   }
   .bio {
     display: none;
@@ -465,7 +460,7 @@ html, body {
     display: block;
     background-color: #e0e0e0;
     opacity: 0.85;
-    max-width: 30%;
+    max-width: 100%;
   }
   h2 {
     color: #7a4b63;
@@ -498,14 +493,14 @@ html, body {
     /*margin-bottom: 0;
     margin-top: 10px;
     padding: 0;*/
-    margin-left: 7%;
+    margin-left: 25%;
   }
   i {
     border: solid #fff;
     border-width: 0 10px 10px 0;
     display: inline-block;
     padding: 20px;
-    margin-left: 33%;
+    margin-left: 110%;
     margin-top: 50px;
     margin-bottom: 15px;
   }
@@ -520,6 +515,12 @@ html, body {
   .headline_photo {
     position: relative;
     text-align: center;
+  }
+  .headline_photo img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100vh;
+    margin-bottom: 30px;
   }
   .headline {
     font-size: 3.7em;
