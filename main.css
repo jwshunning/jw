@@ -366,6 +366,7 @@ i {
   z-index: 200;
   visibility: hidden;
   font-size: 0.8em;
+  color: #383838;
 }
 
 .small-bio.active {
@@ -376,7 +377,7 @@ i {
   /*position: absolute;*/
   /*left: 8em;*/
   border-top: solid 3px #7a4b63;
-  background-color: #e0e0e0;
+  background-color: #e5e5e5;
   padding: 20px;
 }
 
