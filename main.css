@@ -182,6 +182,7 @@ h2 {
   display: inline-block;
   margin-left: 15px;
   width: 60px;
+  cursor: pointer;
 }
 
 .bio p {
@@ -216,6 +217,7 @@ h2 {
   height: 120px;
   font-size: 1.4em;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .read p {
@@ -346,9 +348,14 @@ i {
 }
 
 .name {
-  border: solid #3b9b7d 3px;
+  border: solid #85b2a4 3px;
   padding: 5px;
   display: inline;
+  cursor: pointer;
+}
+
+.name.active {
+  background-color: #dbdbdb;
 }
 
 .small-bio {

@@ -309,6 +309,7 @@ $(document).ready(function () {
 		var expert = $(this).next(".small-bio");
 		// box = expert.find(".small-bio");
 		expert.toggleClass("active");
+		$(this).toggleClass("active");
 
 		var bio = $(this).data("text"),
 			age = $(this).data("age"),
@@ -318,4 +319,14 @@ $(document).ready(function () {
 		$(".place").html(place);
 
 	});
+
+	$(".name").on("mouseover", function () {
+		$(this).css("background-color", "#dbdbdb");
+	});
+
+	$(".name").on("mouseout", function () {
+		$(this).css("background-color", "#fff");
+	});
+
+
 });
