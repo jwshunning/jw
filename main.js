@@ -30,6 +30,24 @@ $(document).ready(function () {
 			$(".journey").addClass("sticky");
 		}
 
+		var jeh = $(".sb3"),
+			nojeh = $(".nojeh"),
+			nojeh2 = $(".nojeh2");
+
+		if (isInView(nojeh)) {
+			console.log("not here");
+			$("#fact3").removeClass("active");
+		}
+		if (isInView(jeh)) {
+			console.log('i see it!');
+			$("#fact3").addClass("active");
+			// $("#fact2").removeClass("active");
+		}
+		if (isInView(nojeh2)) {
+			console.log("its gone");
+			$("#fact3").removeClass("active");
+		}
+
 		var beth = $(".sb1");
 		var nbeth = $(".nsb1");
 		var nbeth2 = $(".nsb2");
@@ -58,21 +76,6 @@ $(document).ready(function () {
 		}
 		if (isInView(noarm2)) {
 			$("#fact2").removeClass("active");
-		}
-
-		var jeh = $(".sb3"),
-			nojeh = $(".nojeh"),
-			nojeh2 = $(".nojeh2");
-
-		if (isInView(nojeh)) {
-			$("#fact3").removeClass("active");
-		}
-		if (isInView(jeh)) {
-			$("#fact3").addClass("active");
-			// $("#fact2").removeClass("active");
-		}
-		if (isInView(nojeh2)) {
-			$("#fact3").removeClass("active");
 		}
 
 		var tru = $(".sb4"),
@@ -239,6 +242,20 @@ $(document).ready(function () {
 		}
 		if (isInView(nosoc2)) {
 			$("#fact5").removeClass("active");
+		}
+		var light = $(".sb15"),
+			nonew = $(".nonew"),
+			nonew2 = $(".nonew2");
+
+		if (isInView(nonew)) {
+			$("#fact15").removeClass("active");
+		}
+		if (isInView(light)) {
+			$("#fact15").addClass("active");
+			// $("#fact2").removeClass("active");
+		}
+		if (isInView(nonew2)) {
+			$("#fact15").removeClass("active");
 		}
 	});
 

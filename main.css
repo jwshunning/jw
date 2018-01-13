@@ -105,11 +105,11 @@ h1 {
 
 .jw-facts {
   position: fixed;
+  top: -100%;
   width: 100%;
   background-color: #e0e0e0;
   z-index: 2000;
   /*left: 0;*/
-  top: -100%;
   text-align: center;
   transition: top .5s ease-in-out;
   /*font-size: .8em;*/
@@ -121,11 +121,11 @@ h1 {
 
 .altern {
   position: fixed;
+  top: -100%;
   width: 100%;
   background-color: #e0e0e0;
   z-index: 2000;
   /*left: 0;*/
-  top: -100%;
   text-align: center;
   transition: top .5s ease-in-out;
   /*font-size: .8em;*/
@@ -139,23 +139,31 @@ h1 {
   font-size: 1em;
   /*margin-top: 10px;*/
   /*margin-bottom: 10px;*/
-  padding: 0;
+  padding: 3px;
 }
 
 .jw-facts h1 {
   font-family: 'Spectral SC', serif;
-  /*margin-top: 10px;*/
-  /*margin-bottom: 10px;*/
   border: none;
+  padding: 0;
+  margin: 5px;
+  font-size: 1.5em;
   /*margin-top: 0px;*/
 }
 
 .altern h1 {
   border: none;
+  padding: 0;
+  margin: 5px;
+  font-size: 1.5em;
 }
 
 .altern p {
-  padding: 0;
+  padding: 3px;
+}
+
+span {
+  display: block;
 }
 
 h2 {
@@ -176,6 +184,10 @@ h2 {
   width: 70%;
   font-style: italic;
   line-height: 1.4;
+}
+
+strong {
+  color: #7a4b63;
 }
 
 .play {
