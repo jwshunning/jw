@@ -103,6 +103,15 @@ h1 {
   margin-left: 10px;
 }
 
+a[href^="http"]:link, a[href^="http"]:visited {
+  /*text-decoration: none;*/
+  color: #3b6b5e;
+}
+
+a[href^="http"]:hover {
+  color: #ad628f;
+}
+
 .jw-facts {
   position: fixed;
   top: -100%;
@@ -366,7 +375,7 @@ i {
   cursor: pointer;
 }
 
-.name.active {
+a.name.active {
   background-color: #dbdbdb;
 }
 
